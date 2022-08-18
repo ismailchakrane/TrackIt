@@ -165,7 +165,23 @@ body {
     margin: 15px 0 0 0;
     position: relative;
 }
-.modal-map > img {width: 100%;height: auto;}
+.modal-map > img {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+
+  0%{
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
 
 .modal-map > .dot {
   background-color: #fff;
@@ -181,6 +197,8 @@ body {
   border-color:#fff;
   /*background-color: #39ff07;*/
 }
+
+
 .modal-map > #map-dot-1 {
   top: 87px;
   left: 117px;
@@ -200,29 +218,38 @@ body {
   position: absolute;
   border: 2px solid #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* border-radius: 20px; */
+  border-radius: 20px;
   background-image: linear-gradient(to right, #fff, #eee);
 }
 .modal-map > .line-done-1 {
   background-image: linear-gradient(to right, #d80032, #fd7e14);
+  animation: fadeIn 1s;
+
 }
 
 .modal-map > .line-done-2 {
   background-image: linear-gradient(to right, #fd7e14, #ffc000);
+  animation: fadeIn 2s;
+
 }
 
 .modal-map > .line-done-3 {
   background-image: linear-gradient(to right, #ffc000, #20c997);
+  animation: fadeIn 3s;
+
 }
 
 
 .modal-map > #map-line-1 {
-  min-width: 97px;
+  min-width: 100px;
   min-height: 12px;
   top: 112px;
-  left: 130px;
-  transform: rotate(22deg) ;
+  left: 127px;
+  transform: rotate(22deg);
 }
+
+
+
 .modal-map > #map-line-2 {
   min-width: 97px;
   min-height: 12px;
@@ -284,3 +311,48 @@ body {
 
 }
 
+@media (max-width: 414px) {
+  .modal-map > #map-dot-1 {
+    top: 60px;
+    left: 40px;
+  }
+  
+  .modal-map > #map-dot-2 {
+    top: 100px;
+    left: 120px;
+  }
+
+  .modal-map > #map-dot-3 {
+    top: 180px;
+    left: 130px;
+  }
+  
+  .modal-map > #map-dot-4 {
+    top: 210px;
+    left: 240px;
+  }
+
+  .modal-map > #map-line-1 {
+    min-width: 97px;
+    min-height: 12px;
+    top: 84px;
+    left: 42px;
+    transform: rotate(29deg) ;
+  }
+  .modal-map > #map-line-2 {
+    min-width: 97px;
+    min-height: 12px;
+    top: 145px;
+    left: 88px;
+    transform: rotate(83deg);
+  }
+  .modal-map > #map-line-3 {
+    min-width: 120px;
+    min-height: 12px;
+    top: 200px;
+    left: 130px;
+    transform: rotate(16deg);
+  }
+
+
+}
