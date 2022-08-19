@@ -12,3 +12,4 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 const touch = (object) => obj.addEventListener("touchstart", () => console.log(object.id), false);
+
