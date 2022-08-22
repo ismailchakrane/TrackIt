@@ -342,14 +342,12 @@ body {
   }
 }
 
-.card-nav {
-  display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
+#progress-bar {
+  width: 45px;
+  height: 45px;
+  position: relative;
 }
 
-/* .card-nav > button {
-  height: 3em;
-  width: 3em;
-} */
+#progress-bar > svg {
+  background-color: white !important;
+}

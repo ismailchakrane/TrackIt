@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<title> Circular Progress Bar </title>-->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+                                        
+    </head>
+    <body>
+
+
+        <!-- JavaScript -->
+        <!--<script src="js/script.js"></script>-->
+    </body>
+</html>
+
+Copy Codes
+
+CSS CODE: 
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7d2ae8;
+}
+
+
+
+
+JAVASCRIPT CODE: 
+ let circularProgress = document.querySelector(".circular-progress"),
+    progressValue = document.querySelector(".progress-value");
+
+let progressStartValue = 0,    
+    progressEndValue = 90,    
+    speed = 100;
+    
+let progress = setInterval(() => {
+    progressStartValue++;
+
+    progressValue.textContent = `${progressStartValue}%`
+    circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+
+    if(progressStartValue == progressEndValue){
+        clearInterval(progress);
+    }    
+}, speed);
+
